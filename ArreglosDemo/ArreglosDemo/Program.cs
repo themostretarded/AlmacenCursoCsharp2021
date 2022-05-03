@@ -13,23 +13,39 @@ namespace ArreglosDemo
             //Inicializador de un arreglo
             //int[] numeros = new int[4];
             //Declaracion de arreglo
+
             int[] numeros = {211,2,2,3 };
+            for (int i=0;i<numeros.Length;i++)
+            { 
+                Console.WriteLine(numeros[i]);
+            }
 
-
+            foreach (var numero in numeros)
+            {
+                Console.WriteLine(numero);
+            }
             Circulo[] circulos = {new Circulo(20),
                 new Circulo(5) };
-
-            var cadenas = new[] {2,2,3,2.54 };
-            var personas = new[] {new{Nombre ="ada" },
-                new{ Nombre="hector"}
-                };
-
-            try {
-                int numero3 = numeros[10];
+            foreach (var circulo in circulos)
+            {
+                Console.WriteLine(circulo.radio);
             }
-            catch {
-                Console.WriteLine("Indice incorrecto");
-            }
+            //var cadenas = new[] {2,2,3,2.54 };
+            //var personas = new[] {
+            //    new{Nombre ="ada" },
+            //    new{ Nombre="hector"}
+            //    };
+            //var tipo = numeros.GetType();
+
+
+            //try 
+            //{
+            //    int numero3 = numeros[10];
+            //}
+            //catch 
+            //{
+            //    Console.WriteLine("Indice incorrecto");
+            //}
         }
     }
 }
