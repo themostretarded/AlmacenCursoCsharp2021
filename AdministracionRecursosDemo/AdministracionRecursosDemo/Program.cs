@@ -10,8 +10,15 @@ namespace AdministracionRecursosDemo
     {
         static void Main(string[] args)
         {
-            FileManager manager1 = new FileManager(@"C:\Users\Meer\Desktop\redaccion.txt");
-            FileManager manager2 = new FileManager(@"C:\Users\Meer\Desktop\redaccion.txt");
+            using (FileManager manager1 = new FileManager(@"C:\Users\Meer\Desktop\redaccion.txt"))
+            {
+            }
+
+            using (FileManager manager2 = new FileManager(@"C:\Users\Meer\Desktop\redaccion.txt"))
+            {
+            }
+
+            //FileManager manager2 = new FileManager(@"C:\Users\Meer\Desktop\redaccion.txt");
             Console.ReadLine();
         }
     }
